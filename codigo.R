@@ -1,5 +1,4 @@
 #Nome: Ana Julia Cunha e Silva
-#RA: 236038
 #Analise de Discriminante Linear
 
 #bibliotecas
@@ -37,11 +36,11 @@ amos <- sample(c(T, F), nrow(pinguim), replace = T, prob=c(0.7,0.3))
 treino <- pinguim[amos, ]
 teste <- pinguim[!amos, ] 
 
-#lda
-mtot <- lda(species~ ., data = pinguim)
+#lda (Linear Discrimminant Analysis)
+mtot <- lda(species~ ., data = pinguim) #Com o Banco Completo
 mtot
 
-mtreino <- lda(species~., data = treino)
+mtreino <- lda(species~., data = treino) #Dados de Treino
 mtreino
 
 #previsao
